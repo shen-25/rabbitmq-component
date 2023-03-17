@@ -1,2 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  .com.zengshen.rabbit.producer.autoconfiguration.RabbitProducerAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zengshen.rabbit.producer.autoconfiguration.RabbitProducerAutoConfiguration
