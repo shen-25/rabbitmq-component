@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rabbit-task" />
         <module name="rabbit-api" />
+        <module name="es-job" />
         <module name="rabbit-common" />
         <module name="rabbit-core-producer" />
       </profile>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="es-job" options="-parameters" />
       <module name="rabbit-api" options="-parameters" />
       <module name="rabbit-common" options="-parameters" />
       <module name="rabbit-core-producer" options="-parameters" />

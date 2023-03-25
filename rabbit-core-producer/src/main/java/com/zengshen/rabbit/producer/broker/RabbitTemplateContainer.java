@@ -11,7 +11,6 @@ import com.zengshen.rabbit.common.serializer.SerializerFactory;
 import com.zengshen.rabbit.common.serializer.impl.JacksonSerializerFactory;
 import com.zengshen.rabbit.producer.service.MessageStoreService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
