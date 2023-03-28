@@ -14,6 +14,11 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 
 
 
+/**
+ * SqlSessionFactory是MyBatis的核心对象，用于初始化MyBatis，读取配置文件，创建SqlSession对象
+ *
+ * @author word
+ */
 @Configuration
 @AutoConfigureAfter(value = {RabbitProducerDataSourceConfiguration.class})
 public class RabbitProducerMyBatisConfiguration {
@@ -28,7 +33,7 @@ public class RabbitProducerMyBatisConfiguration {
 		bean.setDataSource(rabbitProducerDataSource);
 		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		try {
-			bean.setMapperLocations(resolver.getResources("classpath:com/zengshen/rabbit/producer/mapping/*.xml"));
+			bean.setMapperLocations(resolver.getResources("classpath:mapping/*.xml"));
 			SqlSessionFactory sqlSessionFactory = bean.getObject();
 			sqlSessionFactory.getConfiguration().setCacheEnabled(Boolean.TRUE);
 			return sqlSessionFactory;

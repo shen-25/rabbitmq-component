@@ -31,17 +31,20 @@ public class RabbitBrokerImpl implements RabbitBroker {
 
     @Override
     public void reliantSend(Message message) {
-        // 发送的消息进数据库
-        BrokerMessage brokerMessage = new BrokerMessage();
-        brokerMessage.setMessageId(message.getMessageId());
-        brokerMessage.setStatus(BrokerMessageStatus.SENDING.getCode());
-        // tryCount 第一次不用设置
-        Date now = new Date();
-        brokerMessage.setNextRetry(DateUtils.addMinutes(now, BrokerMessageConst.TIMEOUT));
-        brokerMessage.setCreateTime(now);
-        brokerMessage.setUpdateTime(now);
-        brokerMessage.setMessage(message);
-        messageStoreService.insert(brokerMessage);
+        BrokerMessage bm = messageStoreService.selectByMessageId(message.getMessageId());
+        if (bm == null) {
+            // 发送的消息进数据库
+            BrokerMessage brokerMessage = new BrokerMessage();
+            brokerMessage.setMessageId(message.getMessageId());
+            brokerMessage.setStatus(BrokerMessageStatus.SENDING.getCode());
+            // tryCount 第一次不用设置
+            Date now = new Date();
+            brokerMessage.setNextRetry(DateUtils.addMinutes(now, BrokerMessageConst.TIMEOUT));
+            brokerMessage.setCreateTime(now);
+            brokerMessage.setUpdateTime(now);
+            brokerMessage.setMessage(message);
+            messageStoreService.insert(brokerMessage);
+        }
         // 发送消息
         sendKernel(message);
     }
@@ -71,13 +74,14 @@ public class RabbitBrokerImpl implements RabbitBroker {
         AsyncBaseQueue.submit(new Runnable() {
             @Override
             public void run() {
-                CorrelationData correlationData = new CorrelationData(String.format("%s#%s",
-                        message.getMessageId(), System.currentTimeMillis()));
+                CorrelationData correlationData = new CorrelationData(String.format("%s#%s#%s",
+                        message.getMessageId(), System.currentTimeMillis(), message.getMessageType()));
                 String routingKey = message.getRoutingKey();
                 String topic = message.getTopic();
                 RabbitTemplate rabbitTemplate = rabbitTemplateContainer.getTemplate(message);
                 rabbitTemplate.convertAndSend(topic, routingKey,
                         message, correlationData);
+
                 log.info("# RabbitBrokerImpl.sendKernel#  发送消息，消息的id: {}", message.getMessageId());
             }
         });

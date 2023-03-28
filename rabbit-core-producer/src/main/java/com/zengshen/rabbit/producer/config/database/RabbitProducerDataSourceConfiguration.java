@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 /**
+ * 创建数据源
  * @author word
  */
 @Configuration

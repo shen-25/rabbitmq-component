@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: rabbitmq-learn
+  rabbitmq:
+    addresses: zengshen.org:5672
+    username: admin
+    password: 123456
+    virtual-host: /
+    connection-timeout: 1500
+    # 使用启用消息确认模式
+    publisher-confirm-type: correlated
+    # 设置return消息模式 和 mandatory 一起使用
+    publisher-returns: true
+    template:
+      mandatory: true
+
+
+    listener:
+      simple:
+        acknowledge-mode: manual
+        # 消费端的监听个数(即 @RabbitListener开启几个线程去处理数据)
+        max-concurrency: 10
+        concurrency: 5
+        prefetch: 1
+
+elastic:
+  job:
+    zk:
+      namespace: elastic-job
+      serverLists: 192.168.93.129:2181

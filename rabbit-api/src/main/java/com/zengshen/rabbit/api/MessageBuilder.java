@@ -1,7 +1,7 @@
 package com.zengshen.rabbit.api;
 
 
-import org.springframework.messaging.converter.MessageConversionException;
+import com.zengshen.rabbit.api.exception.MessageRuntimeException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,10 +59,9 @@ public class MessageBuilder {
             messageId = UUID.randomUUID().toString();
         }
         if (topic == null) {
-            throw new MessageConversionException("topic不能为空");
+            throw new MessageRuntimeException("topic不能为空");
         }
-        Message message = new Message(messageId, topic, routingKey, attributes, delayMills, messageType);
-        return message;
+        return new Message(messageId, topic, routingKey, attributes, delayMills, messageType);
     }
 
 }

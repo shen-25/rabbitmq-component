@@ -1,0 +1,249 @@
+# Created at 2023-03-26T11:22:49.622
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2023-03-26T11:22:49.748
+Unexpected IOException: I,1,sun.desktop,windows
+
+
+# Created at 2023-03-26T11:22:49.749
+Unexpected IOException: I,1,awt.toolkit,sun.awt.windows.WToolkit
+
+
+# Created at 2023-03-26T11:22:49.752
+Unexpected IOException: I,1,java.specification.version,11
+
+
+# Created at 2023-03-26T11:22:49.754
+Unexpected IOException: I,1,sun.cpu.isalist,amd64
+
+
+# Created at 2023-03-26T11:22:49.756
+Unexpected IOException: I,1,sun.jnu.encoding,GBK
+
+
+# Created at 2023-03-26T11:22:49.760
+Unexpected IOException: I,1,java.class.path,E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test\005Ctarget\005Ctest-classes;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test\005Ctarget\005Cclasses;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-core-producer\005Ctarget\005Crabbit-core-producer-1.0-SNAPSHOT.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-common\005Ctarget\005Crabbit-common-1.0-SNAPSHOT.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-api\005Ctarget\005Crabbit-api-1.0-SNAPSHOT.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-amqp\005C2.5.4\005Cspring-boot-starter-amqp-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-messaging\005C5.3.9\005Cspring-messaging-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Camqp\005Cspring-rabbit\005C2.3.10\005Cspring-rabbit-2.3.10.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Camqp\005Cspring-amqp\005C2.3.10\005Cspring-amqp-2.3.10.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cretry\005Cspring-retry\005C1.3.1\005Cspring-retry-1.3.1.jar;D:\005Cmaven-repo\005Cjavax\005Cannotation\005Cjavax.annotation-api\005C1.3.2\005Cjavax.annotation-api-1.3.2.jar;D:\005Cmaven-repo\005Ccom\005Crabbitmq\005Camqp-client\005C5.12.0\005Camqp-client-5.12.0.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-tx\005C5.3.9\005Cspring-tx-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-jdbc\005C2.5.4\005Cspring-boot-starter-jdbc-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Czaxxer\005CHikariCP\005C4.0.3\005CHikariCP-4.0.3.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-jdbc\005C5.3.9\005Cspring-jdbc-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cspring\005Cboot\005Cmybatis-spring-boot-starter\005C2.2.1\005Cmybatis-spring-boot-starter-2.2.1.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cspring\005Cboot\005Cmybatis-spring-boot-autoconfigure\005C2.2.1\005Cmybatis-spring-boot-autoconfigure-2.2.1.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cmybatis\005C3.5.9\005Cmybatis-3.5.9.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cmybatis-spring\005C2.0.6\005Cmybatis-spring-2.0.6.jar;D:\005Cmaven-repo\005Cmysql\005Cmysql-connector-java\005C8.0.26\005Cmysql-connector-java-8.0.26.jar;D:\005Cmaven-repo\005Ccom\005Calibaba\005Cdruid\005C1.2.15\005Cdruid-1.2.15.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-task\005Ctarget\005Crabbit-task-1.0-SNAPSHOT.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-lite-core\005C2.1.4\005Celastic-job-lite-core-2.1.4.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-common-core\005C2.1.4\005Celastic-job-common-core-2.1.4.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-framework\005C2.10.0\005Ccurator-framework-2.10.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-client\005C2.10.0\005Ccurator-client-2.10.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Czookeeper\005Czookeeper\005C3.4.6\005Czookeeper-3.4.6.jar;D:\005Cmaven-repo\005Clog4j\005Clog4j\005C1.2.16\005Clog4j-1.2.16.jar;D:\005Cmaven-repo\005Cjline\005Cjline\005C0.9.94\005Cjline-0.9.94.jar;D:\005Cmaven-repo\005Cio\005Cnetty\005Cnetty\005C3.7.0.Final\005Cnetty-3.7.0.Final.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-recipes\005C2.10.0\005Ccurator-recipes-2.10.0.jar;D:\005Cmaven-repo\005Ccom\005Cgoogle\005Ccode\005Cgson\005Cgson\005C2.8.7\005Cgson-2.8.7.jar;D:\005Cmaven-repo\005Corg\005Cquartz-scheduler\005Cquartz\005C2.3.2\005Cquartz-2.3.2.jar;D:\005Cmaven-repo\005Ccom\005Cmchange\005Cmchange-commons-java\005C0.2.15\005Cmchange-commons-java-0.2.15.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccommons\005Ccommons-exec\005C1.3\005Ccommons-exec-1.3.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-lite-spring\005C2.1.4\005Celastic-job-lite-spring-2.1.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-actuator\005C2.5.4\005Cspring-boot-starter-actuator-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-actuator-autoconfigure\005C2.5.4\005Cspring-boot-actuator-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-actuator\005C2.5.4\005Cspring-boot-actuator-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Cdatatype\005Cjackson-datatype-jsr310\005C2.12.4\005Cjackson-datatype-jsr310-2.12.4.jar;D:\005Cmaven-repo\005Cio\005Cmicrometer\005Cmicrometer-core\005C1.7.3\005Cmicrometer-core-1.7.3.jar;D:\005Cmaven-repo\005Corg\005Chdrhistogram\005CHdrHistogram\005C2.1.12\005CHdrHistogram-2.1.12.jar;D:\005Cmaven-repo\005Corg\005Clatencyutils\005CLatencyUtils\005C2.0.3\005CLatencyUtils-2.0.3.jar;D:\005Cmaven-repo\005Cjunit\005Cjunit\005C4.13.2\005Cjunit-4.13.2.jar;D:\005Cmaven-repo\005Corg\005Chamcrest\005Chamcrest-core\005C2.2\005Chamcrest-core-2.2.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter\005C2.5.4\005Cspring-boot-starter-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot\005C2.5.4\005Cspring-boot-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-context\005C5.3.9\005Cspring-context-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-aop\005C5.3.9\005Cspring-aop-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-beans\005C5.3.9\005Cspring-beans-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-expression\005C5.3.9\005Cspring-expression-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-autoconfigure\005C2.5.4\005Cspring-boot-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-logging\005C2.5.4\005Cspring-boot-starter-logging-2.5.4.jar;D:\005Cmaven-repo\005Cch\005Cqos\005Clogback\005Clogback-classic\005C1.2.5\005Clogback-classic-1.2.5.jar;D:\005Cmaven-repo\005Cch\005Cqos\005Clogback\005Clogback-core\005C1.2.5\005Clogback-core-1.2.5.jar;D:\005Cmaven-repo\005Corg\005Capache\005Clogging\005Clog4j\005Clog4j-to-slf4j\005C2.14.1\005Clog4j-to-slf4j-2.14.1.jar;D:\005Cmaven-repo\005Corg\005Capache\005Clogging\005Clog4j\005Clog4j-api\005C2.14.1\005Clog4j-api-2.14.1.jar;D:\005Cmaven-repo\005Corg\005Cslf4j\005Cjul-to-slf4j\005C1.7.32\005Cjul-to-slf4j-1.7.32.jar;D:\005Cmaven-repo\005Cjakarta\005Cannotation\005Cjakarta.annotation-api\005C1.3.5\005Cjakarta.annotation-api-1.3.5.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-core\005C5.3.9\005Cspring-core-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-jcl\005C5.3.9\005Cspring-jcl-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cyaml\005Csnakeyaml\005C1.28\005Csnakeyaml-1.28.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-test\005C2.5.4\005Cspring-boot-starter-test-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-test\005C2.5.4\005Cspring-boot-test-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-test-autoconfigure\005C2.5.4\005Cspring-boot-test-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Cjayway\005Cjsonpath\005Cjson-path\005C2.5.0\005Cjson-path-2.5.0.jar;D:\005Cmaven-repo\005Cnet\005Cminidev\005Cjson-smart\005C2.4.7\005Cjson-smart-2.4.7.jar;D:\005Cmaven-repo\005Cnet\005Cminidev\005Caccessors-smart\005C2.4.7\005Caccessors-smart-2.4.7.jar;D:\005Cmaven-repo\005Corg\005Cow2\005Casm\005Casm\005C9.1\005Casm-9.1.jar;D:\005Cmaven-repo\005Corg\005Cslf4j\005Cslf4j-api\005C1.7.32\005Cslf4j-api-1.7.32.jar;D:\005Cmaven-repo\005Cjakarta\005Cxml\005Cbind\005Cjakarta.xml.bind-api\005C2.3.3\005Cjakarta.xml.bind-api-2.3.3.jar;D:\005Cmaven-repo\005Cjakarta\005Cactivation\005Cjakarta.activation-api\005C1.2.2\005Cjakarta.activation-api-1.2.2.jar;D:\005Cmaven-repo\005Corg\005Cassertj\005Cassertj-core\005C3.19.0\005Cassertj-core-3.19.0.jar;D:\005Cmaven-repo\005Corg\005Chamcrest\005Chamcrest\005C2.2\005Chamcrest-2.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter\005C5.7.2\005Cjunit-jupiter-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-api\005C5.7.2\005Cjunit-jupiter-api-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Capiguardian\005Capiguardian-api\005C1.1.0\005Capiguardian-api-1.1.0.jar;D:\005Cmaven-repo\005Corg\005Copentest4j\005Copentest4j\005C1.2.0\005Copentest4j-1.2.0.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cplatform\005Cjunit-platform-commons\005C1.7.2\005Cjunit-platform-commons-1.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-params\005C5.7.2\005Cjunit-jupiter-params-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-engine\005C5.7.2\005Cjunit-jupiter-engine-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cplatform\005Cjunit-platform-engine\005C1.7.2\005Cjunit-platform-engine-1.7.2.jar;D:\005Cmaven-repo\005Corg\005Cmockito\005Cmockito-core\005C3.9.0\005Cmockito-core-3.9.0.jar;D:\005Cmaven-repo\005Cnet\005Cbytebuddy\005Cbyte-buddy\005C1.10.22\005Cbyte-buddy-1.10.22.jar;D:\005Cmaven-repo\005Cnet\005Cbytebuddy\005Cbyte-buddy-agent\005C1.10.22\005Cbyte-buddy-agent-1.10.22.jar;D:\005Cmaven-repo\005Corg\005Cobjenesis\005Cobjenesis\005C3.2\005Cobjenesis-3.2.jar;D:\005Cmaven-repo\005Corg\005Cmockito\005Cmockito-junit-jupiter\005C3.9.0\005Cmockito-junit-jupiter-3.9.0.jar;D:\005Cmaven-repo\005Corg\005Cskyscreamer\005Cjsonassert\005C1.5.0\005Cjsonassert-1.5.0.jar;D:\005Cmaven-repo\005Ccom\005Cvaadin\005Cexternal\005Cgoogle\005Candroid-json\005C0.0.20131108.vaadin1\005Candroid-json-0.0.20131108.vaadin1.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-test\005C5.3.9\005Cspring-test-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cxmlunit\005Cxmlunit-core\005C2.8.2\005Cxmlunit-core-2.8.2.jar;D:\005Cmaven-repo\005Corg\005Cprojectlombok\005Clombok\005C1.18.20\005Clombok-1.18.20.jar;D:\005Cmaven-repo\005Ccom\005Cgoogle\005Cguava\005Cguava\005C20.0\005Cguava-20.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccommons\005Ccommons-lang3\005C3.3.1\005Ccommons-lang3-3.3.1.jar;D:\005Cmaven-repo\005Ccommons-io\005Ccommons-io\005C2.4\005Ccommons-io-2.4.jar;D:\005Cmaven-repo\005Ccom\005Calibaba\005Cfastjson\005C1.1.26\005Cfastjson-1.1.26.jar;D:\005Cmaven-repo\005Corg\005Ccodehaus\005Cjackson\005Cjackson-mapper-asl\005C1.9.13\005Cjackson-mapper-asl-1.9.13.jar;D:\005Cmaven-repo\005Corg\005Ccodehaus\005Cjackson\005Cjackson-core-asl\005C1.9.13\005Cjackson-core-asl-1.9.13.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-databind\005C2.12.4\005Cjackson-databind-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-annotations\005C2.12.4\005Cjackson-annotations-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-core\005C2.12.4\005Cjackson-core-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cuuid\005Cjava-uuid-generator\005C3.1.4\005Cjava-uuid-generator-3.1.4.jar;
+
+
+# Created at 2023-03-26T11:22:49.763
+Unexpected IOException: I,1,java.vm.vendor,Oracle Corporation
+
+
+# Created at 2023-03-26T11:22:49.766
+Unexpected IOException: I,1,sun.arch.data.model,64
+
+
+# Created at 2023-03-26T11:22:49.767
+Unexpected IOException: I,1,user.variant,
+
+
+# Created at 2023-03-26T11:22:49.769
+Unexpected IOException: I,1,java.vendor.url,https://openjdk.java.net/
+
+
+# Created at 2023-03-26T11:22:49.770
+Unexpected IOException: I,1,user.timezone,Asia/Shanghai
+
+
+# Created at 2023-03-26T11:22:49.771
+Unexpected IOException: I,1,os.name,Windows 10
+
+
+# Created at 2023-03-26T11:22:49.772
+Unexpected IOException: I,1,java.vm.specification.version,11
+
+
+# Created at 2023-03-26T11:22:49.773
+Unexpected IOException: I,1,sun.java.launcher,SUN_STANDARD
+
+
+# Created at 2023-03-26T11:22:49.774
+Unexpected IOException: I,1,user.country,CN
+
+
+# Created at 2023-03-26T11:22:49.775
+Unexpected IOException: I,1,sun.boot.library.path,D:\005CProgram Files\005CJava\005Cjdk-11.0.11\005Cbin
+
+
+# Created at 2023-03-26T11:22:49.777
+Unexpected IOException: I,1,sun.java.command,C:\005CUsers\005Cword\005CAppData\005CLocal\005CTemp\005Csurefire1010673836218668661\005Csurefirebooter10992196771872068453.jar C:\005CUsers\005Cword\005CAppData\005CLocal\005CTemp\005Csurefire1010673836218668661 2023-03-26T11-22-41_637-jvmRun1 surefire18169871388594596665tmp surefire_012395897928925494655tmp
+
+
+# Created at 2023-03-26T11:22:49.779
+Unexpected IOException: I,1,jdk.debug,release
+
+
+# Created at 2023-03-26T11:22:49.783
+Unexpected IOException: I,1,surefire.test.class.path,E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test\005Ctarget\005Ctest-classes;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test\005Ctarget\005Cclasses;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-core-producer\005Ctarget\005Crabbit-core-producer-1.0-SNAPSHOT.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-common\005Ctarget\005Crabbit-common-1.0-SNAPSHOT.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-api\005Ctarget\005Crabbit-api-1.0-SNAPSHOT.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-amqp\005C2.5.4\005Cspring-boot-starter-amqp-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-messaging\005C5.3.9\005Cspring-messaging-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Camqp\005Cspring-rabbit\005C2.3.10\005Cspring-rabbit-2.3.10.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Camqp\005Cspring-amqp\005C2.3.10\005Cspring-amqp-2.3.10.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cretry\005Cspring-retry\005C1.3.1\005Cspring-retry-1.3.1.jar;D:\005Cmaven-repo\005Cjavax\005Cannotation\005Cjavax.annotation-api\005C1.3.2\005Cjavax.annotation-api-1.3.2.jar;D:\005Cmaven-repo\005Ccom\005Crabbitmq\005Camqp-client\005C5.12.0\005Camqp-client-5.12.0.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-tx\005C5.3.9\005Cspring-tx-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-jdbc\005C2.5.4\005Cspring-boot-starter-jdbc-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Czaxxer\005CHikariCP\005C4.0.3\005CHikariCP-4.0.3.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-jdbc\005C5.3.9\005Cspring-jdbc-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cspring\005Cboot\005Cmybatis-spring-boot-starter\005C2.2.1\005Cmybatis-spring-boot-starter-2.2.1.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cspring\005Cboot\005Cmybatis-spring-boot-autoconfigure\005C2.2.1\005Cmybatis-spring-boot-autoconfigure-2.2.1.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cmybatis\005C3.5.9\005Cmybatis-3.5.9.jar;D:\005Cmaven-repo\005Corg\005Cmybatis\005Cmybatis-spring\005C2.0.6\005Cmybatis-spring-2.0.6.jar;D:\005Cmaven-repo\005Cmysql\005Cmysql-connector-java\005C8.0.26\005Cmysql-connector-java-8.0.26.jar;D:\005Cmaven-repo\005Ccom\005Calibaba\005Cdruid\005C1.2.15\005Cdruid-1.2.15.jar;E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-task\005Ctarget\005Crabbit-task-1.0-SNAPSHOT.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-lite-core\005C2.1.4\005Celastic-job-lite-core-2.1.4.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-common-core\005C2.1.4\005Celastic-job-common-core-2.1.4.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-framework\005C2.10.0\005Ccurator-framework-2.10.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-client\005C2.10.0\005Ccurator-client-2.10.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Czookeeper\005Czookeeper\005C3.4.6\005Czookeeper-3.4.6.jar;D:\005Cmaven-repo\005Clog4j\005Clog4j\005C1.2.16\005Clog4j-1.2.16.jar;D:\005Cmaven-repo\005Cjline\005Cjline\005C0.9.94\005Cjline-0.9.94.jar;D:\005Cmaven-repo\005Cio\005Cnetty\005Cnetty\005C3.7.0.Final\005Cnetty-3.7.0.Final.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccurator\005Ccurator-recipes\005C2.10.0\005Ccurator-recipes-2.10.0.jar;D:\005Cmaven-repo\005Ccom\005Cgoogle\005Ccode\005Cgson\005Cgson\005C2.8.7\005Cgson-2.8.7.jar;D:\005Cmaven-repo\005Corg\005Cquartz-scheduler\005Cquartz\005C2.3.2\005Cquartz-2.3.2.jar;D:\005Cmaven-repo\005Ccom\005Cmchange\005Cmchange-commons-java\005C0.2.15\005Cmchange-commons-java-0.2.15.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccommons\005Ccommons-exec\005C1.3\005Ccommons-exec-1.3.jar;D:\005Cmaven-repo\005Ccom\005Cdangdang\005Celastic-job-lite-spring\005C2.1.4\005Celastic-job-lite-spring-2.1.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-actuator\005C2.5.4\005Cspring-boot-starter-actuator-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-actuator-autoconfigure\005C2.5.4\005Cspring-boot-actuator-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-actuator\005C2.5.4\005Cspring-boot-actuator-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Cdatatype\005Cjackson-datatype-jsr310\005C2.12.4\005Cjackson-datatype-jsr310-2.12.4.jar;D:\005Cmaven-repo\005Cio\005Cmicrometer\005Cmicrometer-core\005C1.7.3\005Cmicrometer-core-1.7.3.jar;D:\005Cmaven-repo\005Corg\005Chdrhistogram\005CHdrHistogram\005C2.1.12\005CHdrHistogram-2.1.12.jar;D:\005Cmaven-repo\005Corg\005Clatencyutils\005CLatencyUtils\005C2.0.3\005CLatencyUtils-2.0.3.jar;D:\005Cmaven-repo\005Cjunit\005Cjunit\005C4.13.2\005Cjunit-4.13.2.jar;D:\005Cmaven-repo\005Corg\005Chamcrest\005Chamcrest-core\005C2.2\005Chamcrest-core-2.2.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter\005C2.5.4\005Cspring-boot-starter-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot\005C2.5.4\005Cspring-boot-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-context\005C5.3.9\005Cspring-context-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-aop\005C5.3.9\005Cspring-aop-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-beans\005C5.3.9\005Cspring-beans-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-expression\005C5.3.9\005Cspring-expression-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-autoconfigure\005C2.5.4\005Cspring-boot-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-logging\005C2.5.4\005Cspring-boot-starter-logging-2.5.4.jar;D:\005Cmaven-repo\005Cch\005Cqos\005Clogback\005Clogback-classic\005C1.2.5\005Clogback-classic-1.2.5.jar;D:\005Cmaven-repo\005Cch\005Cqos\005Clogback\005Clogback-core\005C1.2.5\005Clogback-core-1.2.5.jar;D:\005Cmaven-repo\005Corg\005Capache\005Clogging\005Clog4j\005Clog4j-to-slf4j\005C2.14.1\005Clog4j-to-slf4j-2.14.1.jar;D:\005Cmaven-repo\005Corg\005Capache\005Clogging\005Clog4j\005Clog4j-api\005C2.14.1\005Clog4j-api-2.14.1.jar;D:\005Cmaven-repo\005Corg\005Cslf4j\005Cjul-to-slf4j\005C1.7.32\005Cjul-to-slf4j-1.7.32.jar;D:\005Cmaven-repo\005Cjakarta\005Cannotation\005Cjakarta.annotation-api\005C1.3.5\005Cjakarta.annotation-api-1.3.5.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-core\005C5.3.9\005Cspring-core-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-jcl\005C5.3.9\005Cspring-jcl-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cyaml\005Csnakeyaml\005C1.28\005Csnakeyaml-1.28.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-starter-test\005C2.5.4\005Cspring-boot-starter-test-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-test\005C2.5.4\005Cspring-boot-test-2.5.4.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cboot\005Cspring-boot-test-autoconfigure\005C2.5.4\005Cspring-boot-test-autoconfigure-2.5.4.jar;D:\005Cmaven-repo\005Ccom\005Cjayway\005Cjsonpath\005Cjson-path\005C2.5.0\005Cjson-path-2.5.0.jar;D:\005Cmaven-repo\005Cnet\005Cminidev\005Cjson-smart\005C2.4.7\005Cjson-smart-2.4.7.jar;D:\005Cmaven-repo\005Cnet\005Cminidev\005Caccessors-smart\005C2.4.7\005Caccessors-smart-2.4.7.jar;D:\005Cmaven-repo\005Corg\005Cow2\005Casm\005Casm\005C9.1\005Casm-9.1.jar;D:\005Cmaven-repo\005Corg\005Cslf4j\005Cslf4j-api\005C1.7.32\005Cslf4j-api-1.7.32.jar;D:\005Cmaven-repo\005Cjakarta\005Cxml\005Cbind\005Cjakarta.xml.bind-api\005C2.3.3\005Cjakarta.xml.bind-api-2.3.3.jar;D:\005Cmaven-repo\005Cjakarta\005Cactivation\005Cjakarta.activation-api\005C1.2.2\005Cjakarta.activation-api-1.2.2.jar;D:\005Cmaven-repo\005Corg\005Cassertj\005Cassertj-core\005C3.19.0\005Cassertj-core-3.19.0.jar;D:\005Cmaven-repo\005Corg\005Chamcrest\005Chamcrest\005C2.2\005Chamcrest-2.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter\005C5.7.2\005Cjunit-jupiter-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-api\005C5.7.2\005Cjunit-jupiter-api-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Capiguardian\005Capiguardian-api\005C1.1.0\005Capiguardian-api-1.1.0.jar;D:\005Cmaven-repo\005Corg\005Copentest4j\005Copentest4j\005C1.2.0\005Copentest4j-1.2.0.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cplatform\005Cjunit-platform-commons\005C1.7.2\005Cjunit-platform-commons-1.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-params\005C5.7.2\005Cjunit-jupiter-params-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cjupiter\005Cjunit-jupiter-engine\005C5.7.2\005Cjunit-jupiter-engine-5.7.2.jar;D:\005Cmaven-repo\005Corg\005Cjunit\005Cplatform\005Cjunit-platform-engine\005C1.7.2\005Cjunit-platform-engine-1.7.2.jar;D:\005Cmaven-repo\005Corg\005Cmockito\005Cmockito-core\005C3.9.0\005Cmockito-core-3.9.0.jar;D:\005Cmaven-repo\005Cnet\005Cbytebuddy\005Cbyte-buddy\005C1.10.22\005Cbyte-buddy-1.10.22.jar;D:\005Cmaven-repo\005Cnet\005Cbytebuddy\005Cbyte-buddy-agent\005C1.10.22\005Cbyte-buddy-agent-1.10.22.jar;D:\005Cmaven-repo\005Corg\005Cobjenesis\005Cobjenesis\005C3.2\005Cobjenesis-3.2.jar;D:\005Cmaven-repo\005Corg\005Cmockito\005Cmockito-junit-jupiter\005C3.9.0\005Cmockito-junit-jupiter-3.9.0.jar;D:\005Cmaven-repo\005Corg\005Cskyscreamer\005Cjsonassert\005C1.5.0\005Cjsonassert-1.5.0.jar;D:\005Cmaven-repo\005Ccom\005Cvaadin\005Cexternal\005Cgoogle\005Candroid-json\005C0.0.20131108.vaadin1\005Candroid-json-0.0.20131108.vaadin1.jar;D:\005Cmaven-repo\005Corg\005Cspringframework\005Cspring-test\005C5.3.9\005Cspring-test-5.3.9.jar;D:\005Cmaven-repo\005Corg\005Cxmlunit\005Cxmlunit-core\005C2.8.2\005Cxmlunit-core-2.8.2.jar;D:\005Cmaven-repo\005Corg\005Cprojectlombok\005Clombok\005C1.18.20\005Clombok-1.18.20.jar;D:\005Cmaven-repo\005Ccom\005Cgoogle\005Cguava\005Cguava\005C20.0\005Cguava-20.0.jar;D:\005Cmaven-repo\005Corg\005Capache\005Ccommons\005Ccommons-lang3\005C3.3.1\005Ccommons-lang3-3.3.1.jar;D:\005Cmaven-repo\005Ccommons-io\005Ccommons-io\005C2.4\005Ccommons-io-2.4.jar;D:\005Cmaven-repo\005Ccom\005Calibaba\005Cfastjson\005C1.1.26\005Cfastjson-1.1.26.jar;D:\005Cmaven-repo\005Corg\005Ccodehaus\005Cjackson\005Cjackson-mapper-asl\005C1.9.13\005Cjackson-mapper-asl-1.9.13.jar;D:\005Cmaven-repo\005Corg\005Ccodehaus\005Cjackson\005Cjackson-core-asl\005C1.9.13\005Cjackson-core-asl-1.9.13.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-databind\005C2.12.4\005Cjackson-databind-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-annotations\005C2.12.4\005Cjackson-annotations-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cjackson\005Ccore\005Cjackson-core\005C2.12.4\005Cjackson-core-2.12.4.jar;D:\005Cmaven-repo\005Ccom\005Cfasterxml\005Cuuid\005Cjava-uuid-generator\005C3.1.4\005Cjava-uuid-generator-3.1.4.jar;
+
+
+# Created at 2023-03-26T11:22:49.784
+Unexpected IOException: I,1,sun.cpu.endian,little
+
+
+# Created at 2023-03-26T11:22:49.786
+Unexpected IOException: I,1,user.home,C:\005CUsers\005Cword
+
+
+# Created at 2023-03-26T11:22:49.788
+Unexpected IOException: I,1,user.language,zh
+
+
+# Created at 2023-03-26T11:22:49.790
+Unexpected IOException: I,1,java.specification.vendor,Oracle Corporation
+
+
+# Created at 2023-03-26T11:22:49.791
+Unexpected IOException: I,1,java.version.date,2021-04-20
+
+
+# Created at 2023-03-26T11:22:49.792
+Unexpected IOException: I,1,java.home,D:\005CProgram Files\005CJava\005Cjdk-11.0.11
+
+
+# Created at 2023-03-26T11:22:49.795
+Unexpected IOException: I,1,file.separator,\005C
+
+
+# Created at 2023-03-26T11:22:49.796
+Unexpected IOException: I,1,basedir,E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test
+
+
+# Created at 2023-03-26T11:22:49.798
+Unexpected IOException: I,1,java.vm.compressedOopsMode,Zero based
+
+
+# Created at 2023-03-26T11:22:49.799
+Unexpected IOException: I,1,line.separator,\000D\000A
+
+
+# Created at 2023-03-26T11:22:49.800
+Unexpected IOException: I,1,java.specification.name,Java Platform API Specification
+
+
+# Created at 2023-03-26T11:22:49.801
+Unexpected IOException: I,1,java.vm.specification.vendor,Oracle Corporation
+
+
+# Created at 2023-03-26T11:22:49.802
+Unexpected IOException: I,1,java.awt.graphicsenv,sun.awt.Win32GraphicsEnvironment
+
+
+# Created at 2023-03-26T11:22:49.803
+Unexpected IOException: I,1,surefire.real.class.path,C:\005CUsers\005Cword\005CAppData\005CLocal\005CTemp\005Csurefire1010673836218668661\005Csurefirebooter10992196771872068453.jar
+
+
+# Created at 2023-03-26T11:22:49.804
+Unexpected IOException: I,1,user.script,
+
+
+# Created at 2023-03-26T11:22:49.806
+Unexpected IOException: I,1,sun.management.compiler,HotSpot 64-Bit Tiered Compilers
+
+
+# Created at 2023-03-26T11:22:49.807
+Unexpected IOException: I,1,java.runtime.version,11.0.11+9-LTS-194
+
+
+# Created at 2023-03-26T11:22:49.808
+Unexpected IOException: I,1,user.name,word
+
+
+# Created at 2023-03-26T11:22:49.809
+Unexpected IOException: I,1,path.separator,;
+
+
+# Created at 2023-03-26T11:22:49.810
+Unexpected IOException: I,1,os.version,10.0
+
+
+# Created at 2023-03-26T11:22:49.812
+Unexpected IOException: I,1,java.runtime.name,Java(TM) SE Runtime Environment
+
+
+# Created at 2023-03-26T11:22:49.813
+Unexpected IOException: I,1,file.encoding,GBK
+
+
+# Created at 2023-03-26T11:22:49.815
+Unexpected IOException: I,1,java.vm.name,Java HotSpot(TM) 64-Bit Server VM
+
+
+# Created at 2023-03-26T11:22:49.816
+Unexpected IOException: I,1,java.vendor.version,18.9
+
+
+# Created at 2023-03-26T11:22:49.817
+Unexpected IOException: I,1,localRepository,D:\005Cmaven-repo
+
+
+# Created at 2023-03-26T11:22:49.818
+Unexpected IOException: I,1,java.vendor.url.bug,https://bugreport.java.com/bugreport/
+
+
+# Created at 2023-03-26T11:22:49.819
+Unexpected IOException: I,1,java.io.tmpdir,C:\005CUsers\005Cword\005CAppData\005CLocal\005CTemp\005C
+
+
+# Created at 2023-03-26T11:22:49.820
+Unexpected IOException: I,1,idea.version,2021.1.2
+
+
+# Created at 2023-03-26T11:22:49.821
+Unexpected IOException: I,1,java.version,11.0.11
+
+
+# Created at 2023-03-26T11:22:49.822
+Unexpected IOException: I,1,user.dir,E:\005Cjava-web-project\005Crabbitmq-component\005Crabbit-test
+
+
+# Created at 2023-03-26T11:22:49.823
+Unexpected IOException: I,1,os.arch,amd64
+
+
+# Created at 2023-03-26T11:22:49.824
+Unexpected IOException: I,1,java.vm.specification.name,Java Virtual Machine Specification
+
+
+# Created at 2023-03-26T11:22:49.824
+Unexpected IOException: I,1,java.awt.printerjob,sun.awt.windows.WPrinterJob
+
+
+# Created at 2023-03-26T11:22:49.825
+Unexpected IOException: I,1,sun.os.patch.level,
+
+
+# Created at 2023-03-26T11:22:49.826
+Unexpected IOException: I,1,java.library.path,D:\005CProgram Files\005CJava\005Cjdk-11.0.11\005Cbin;C:\005CWINDOWS\005CSun\005CJava\005Cbin;C:\005CWINDOWS\005Csystem32;C:\005CWINDOWS;D:\005CPrograms\005CPython\005CPython311\005CScripts\005C;D:\005CPrograms\005CPython\005CPython311\005C;C:\005CProgram Files\005CCommon Files\005COracle\005CJava\005Cjavapath;D:\005CVMwareVMware Workstation\005Cbin\005C;C:\005CWindows\005Csystem32;C:\005CWindows;C:\005CWindows\005CSystem32\005CWbem;C:\005CWindows\005CSystem32\005COpenSSH\005C;D:\005Cdata\005CGit\005Ccmd;D:\005Cdata\005CGit\005Cmingw64\005Cbin;D:\005Cdata\005CGit\005Cusr\005Cbin;C:\005CWINDOWS\005Csystem32;C:\005CWINDOWS;C:\005CWINDOWS\005CSystem32\005CWbem;C:\005CWINDOWS\005CSystem32\005CWindowsPowerShell\005Cv1.0\005C;C:\005CWINDOWS\005CSystem32\005COpenSSH\005C;D:\005Cphpstudy_pro\005Cphpstudy_pro\005CExtensions\005Cphp\005Cphp7.3.4nts;C:\005CProgram Files\005CAzure Data Studio\005Cbin;D:\005CProgram Files (x86)\005CNetSarang\005CXshell 7\005C;D:\005CProgram Files (x86)\005CNetSarang\005CXftp 7\005C;D:\005Clist\005C;D:\005CProgram Files\005CMongoDB\005CServer\005C6.0\005Cbin;D:\005CProgram Files\005CMongoDB\005Cmongosh-1.5.4-win32-x64\005Cbin;C:\005CUsers\005Cword\005CAppData\005CLocal\005CYarn\005CData\005Cglobal\005Cnode_modules\005Ckoa-generator\005Cbin;E:\005CDriver\005Cchromedriver;C:\005CProgram Files\005CGoogle\005CChrome\005CApplication;E:\005CDriver\005CMicrosoft Edge WebDriver;D:\005Capache-maven-3.6.3\005Cbin;D:\005CMysql\005Cmysql-8.0.28-winx64\005Cbin;D:\005Csqllite\005Csqlite-tools-win32-x86-3400000;%USERPROFILE%\005CAppData\005CLocal\005CMicrosoft\005CWindowsApps;%IntelliJ IDEA Community Edition%;%PhpStorm%;C:\005CProgram Files\005CAzure Data Studio\005Cbin;D:\005CProgram Files (x86)\005CMicrosoft VS Code\005Cbin;C:\005CUsers\005Cword\005CAppData\005CRoaming\005Cnpm;D:\005CQt\005CQt5.9.0\005C5.9\005Cmingw53_32\005Cbin;%PyCharm Community Edition%;D:\005CProgram Files (x86)\005CTencent\005CQQGameTempest\005CHall.57938\005C;.
+
+
+# Created at 2023-03-26T11:22:49.828
+Unexpected IOException: I,1,java.vendor,Oracle Corporation
+
+
+# Created at 2023-03-26T11:22:49.828
+Unexpected IOException: I,1,java.vm.info,mixed mode
+
+
+# Created at 2023-03-26T11:22:49.828
+Unexpected IOException: I,1,java.vm.version,11.0.11+9-LTS-194
+
+
+# Created at 2023-03-26T11:22:49.828
+Unexpected IOException: I,1,sun.io.unicode.encoding,UnicodeLittle
+
+
+# Created at 2023-03-26T11:22:49.828
+Unexpected IOException: I,1,maven.repo.local,D:\005Cmaven-repo
+
+
+# Created at 2023-03-26T11:22:49.835
+Unexpected IOException: I,1,java.class.version,55.0
+
+

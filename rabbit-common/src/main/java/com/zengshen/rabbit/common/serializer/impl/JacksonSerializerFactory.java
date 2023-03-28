@@ -4,6 +4,9 @@ import com.zengshen.rabbit.api.Message;
 import com.zengshen.rabbit.common.serializer.Serializer;
 import com.zengshen.rabbit.common.serializer.SerializerFactory;
 
+/**
+ * @author word
+ */
 public class JacksonSerializerFactory implements SerializerFactory {
 
     public static final SerializerFactory INSTANCE = new JacksonSerializerFactory();

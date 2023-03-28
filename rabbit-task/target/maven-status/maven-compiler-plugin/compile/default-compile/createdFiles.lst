@@ -1,0 +1,7 @@
+com\zengshen\rabbit\task\annotation\ElasticJobConfig.class
+com\zengshen\rabbit\task\annotation\EnableElasticJob.class
+com\zengshen\rabbit\task\enums\ElasticJobTypeEnum.class
+com\zengshen\rabbit\task\autoconfigure\JobZookeeperProperties.class
+com\zengshen\rabbit\task\autoconfigure\JobParserAutoConfiguration.class
+com\zengshen\rabbit\task\parser\ElasticJobConfParser.class
+META-INF\spring-configuration-metadata.json

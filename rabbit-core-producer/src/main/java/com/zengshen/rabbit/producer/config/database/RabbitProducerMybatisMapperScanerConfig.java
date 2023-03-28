@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 扫描Mapper接口类所在的包，为mapper创建实现类
  * @author word
  */
 @Configuration

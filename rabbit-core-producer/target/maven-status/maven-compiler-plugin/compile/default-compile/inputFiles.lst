@@ -1,0 +1,16 @@
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\entity\constant\BrokerMessageConst.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\broker\ProducerClient.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\config\database\RabbitProducerDataSourceConfiguration.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\entity\constant\BrokerMessageStatus.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\broker\AsyncBaseQueue.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\entity\BrokerMessage.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\autoconfiguration\RabbitProducerAutoConfiguration.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\task\RetryMessageDataflowJob.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\mapper\BrokerMessageMapper.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\service\MessageStoreService.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\broker\RabbitTemplateContainer.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\config\database\RabbitProducerMyBatisConfiguration.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\config\database\RabbitProducerMybatisMapperScanerConfig.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\broker\RabbitBroker.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\config\database\BrokerMessageConfiguration.java
+E:\java-web-project\rabbitmq-component\rabbit-core-producer\src\main\java\com\zengshen\rabbit\producer\broker\RabbitBrokerImpl.java

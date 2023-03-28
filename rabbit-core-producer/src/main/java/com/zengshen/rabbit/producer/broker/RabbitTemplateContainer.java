@@ -16,11 +16,15 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author word
+ */
 @Component
 @Slf4j
 public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback {
@@ -29,6 +33,9 @@ public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback 
     private static Splitter splitter = Splitter.on("#");
 
     SerializerFactory serializerFactory = JacksonSerializerFactory.INSTANCE;
+
+    @Autowired
+    private ConnectionFactory connectionFactory;
 
     @Autowired
     private MessageStoreService messageStoreService;
@@ -42,14 +49,13 @@ public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback 
         if (rabbitTemplate != null) {
             return rabbitTemplate;
         }
-        log.info("#RabbitTemplateContainer.getTemplate# 主题： {} 是空的", topic);
-        RabbitTemplate newRabbitTemplate = new RabbitTemplate();
+        log.info("#RabbitTemplateContainer.getTemplate# 主题： {}", topic);
+        RabbitTemplate newRabbitTemplate = new RabbitTemplate(connectionFactory);
         newRabbitTemplate.setExchange(topic);
         newRabbitTemplate.setRetryTemplate(new RetryTemplate());
         newRabbitTemplate.setRoutingKey(message.getRoutingKey());
         // 对于message的序列化
         // 转为他的，转为我的
-
         Serializer serializer = serializerFactory.create();
         GenericMessageConverter gmc = new GenericMessageConverter(serializer);
         RabbitMessageConverter rmc = new RabbitMessageConverter(gmc);
@@ -66,12 +72,21 @@ public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback 
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         // 消息的应答
+        if (correlationData == null) {
+            throw new MessageRuntimeException("correlationData不能为空");
+        }
         List<String> splitToList = splitter.splitToList(correlationData.getId());
+        if (splitToList.size() != 3) {
+            throw new MessageRuntimeException("消息的correlationData不正确");
+        }
         String messageId = splitToList.get(0);
         Long sendTime = Long.valueOf(splitToList.get(1));
+        String messageType = splitToList.get(2);
         if (ack) {
             // 当broker返回ack成功时, 把数据库的消息设置状态为ok
-            messageStoreService.success(messageId);
+            if ((MessageType.RELIANT).endsWith(messageType)) {
+                messageStoreService.success(messageId);
+            }
             log.info("发送消息成功, confirm messageId: {}, 发送时间: {}", messageId, sendTime);
         } else{
             log.error("发送消息失败, confirm messageId: {}, 发送时间: {}", messageId, sendTime);
