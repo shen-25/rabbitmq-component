@@ -18,6 +18,9 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +36,8 @@ public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback 
     private static Splitter splitter = Splitter.on("#");
 
     SerializerFactory serializerFactory = JacksonSerializerFactory.INSTANCE;
+
+
 
     @Autowired
     private ConnectionFactory connectionFactory;
@@ -80,16 +85,18 @@ public class RabbitTemplateContainer  implements RabbitTemplate.ConfirmCallback 
             throw new MessageRuntimeException("消息的correlationData不正确");
         }
         String messageId = splitToList.get(0);
-        Long sendTime = Long.valueOf(splitToList.get(1));
+        long sendTime = Long.parseLong(splitToList.get(1));
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String sendTimeStr = simpleDateFormat.format(new Date(sendTime));
         String messageType = splitToList.get(2);
         if (ack) {
             // 当broker返回ack成功时, 把数据库的消息设置状态为ok
             if ((MessageType.RELIANT).endsWith(messageType)) {
                 messageStoreService.success(messageId);
             }
-            log.info("发送消息成功, confirm messageId: {}, 发送时间: {}", messageId, sendTime);
+            log.info("发送消息成功, 消息的Id: {}, 发送时间: {}", messageId, sendTimeStr);
         } else{
-            log.error("发送消息失败, confirm messageId: {}, 发送时间: {}", messageId, sendTime);
+            log.error("发送消息失败, 消息的Id: {}, 发送时间: {}", messageId, sendTimeStr);
         }
     }
 }

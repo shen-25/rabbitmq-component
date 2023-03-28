@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author word
@@ -41,9 +42,18 @@ public class ProducerClient implements MessageProducer {
         }
     }
 
+    /**
+     * 认为发送批量消息的类型都为迅速消息
+     * @param messageList
+     * @throws MessageRuntimeException
+     */
     @Override
     public void send(List<Message> messageList) throws MessageRuntimeException {
-
+        messageList.forEach(message -> {
+            message.setMessageType(MessageType.RAPID);
+            MessageHolder.add(message);
+        });
+        rabbitBroker.sendMessages();
     }
 
     @Override

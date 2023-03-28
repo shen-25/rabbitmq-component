@@ -22,9 +22,11 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.util.StringUtils;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author word
@@ -53,11 +55,27 @@ public class ElasticJobConfParser implements ApplicationListener<ApplicationRead
                     clazz = Class.forName(className.substring(0, className.indexOf("$")));
                 }
                 // 获取接口类型， 用于判断是什么类型的任务
-                String jobTypeName = clazz.getInterfaces()[0].getSimpleName();
-
+                Class<?>[] classes = clazz.getInterfaces();
+                ElasticJobTypeEnum[] elasticJobTypeEnums = ElasticJobTypeEnum.values();
+                List<Class<?>> jobTypeNameList = Arrays.stream(classes).filter(aClass -> {
+                    String simpleName = aClass.getSimpleName();
+                    boolean isTypeName = false;
+                    for (ElasticJobTypeEnum elasticJobTypeEnum : elasticJobTypeEnums) {
+                        if (simpleName.equals(elasticJobTypeEnum.getType())) {
+                            isTypeName = true;
+                            break;
+                        }
+                    }
+                    return isTypeName;
+                }).collect(Collectors.toList());
+                if (jobTypeNameList.isEmpty()) {
+                    log.info("没有指定定时任务的类型");
+                    return;
+                }
+                String jobTypeName = jobTypeNameList.get(0).getSimpleName();
+                //	获取配置项 ElasticJobConfig
                 ElasticJobConfig conf = clazz.getAnnotation(ElasticJobConfig.class);
                 String jobClass = clazz.getName();
-
                 String jobName = this.jobZookeeperProperties.getNamespace() + "." + conf.name();
                 String cron = conf.cron();
                 String shardingItemParameters = conf.shardingItemParameters();

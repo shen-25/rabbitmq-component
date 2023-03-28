@@ -2,6 +2,7 @@ package com.zengshen.rabbit.producer.task;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
+import com.zengshen.rabbit.common.serializer.Serializer;
 import com.zengshen.rabbit.producer.broker.RabbitBroker;
 import com.zengshen.rabbit.producer.entity.BrokerMessage;
 import com.zengshen.rabbit.producer.entity.constant.BrokerMessageStatus;
@@ -11,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -23,9 +25,11 @@ import java.util.List;
         cron = "0/5 * * * * ?",
         description = "可靠性消息补偿任务",
         overwrite = true,
-        shardingTotalCount = 1
+        shardingTotalCount = 1,
+        streamingProcess = false
+
 )
-public class RetryMessageDataflowJob implements DataflowJob<BrokerMessage> {
+public class RetryMessageDataflowJob implements Serializable ,DataflowJob<BrokerMessage> {
 
     @Autowired
     private MessageStoreService messageStoreService;
@@ -41,6 +45,7 @@ public class RetryMessageDataflowJob implements DataflowJob<BrokerMessage> {
         log.info("---------抓取的数据数量, 数量: {} ------", brokerMessages.size());
         return brokerMessages;
     }
+
 
     @Override
     public void processData(ShardingContext shardingContext, List<BrokerMessage> dataList) {

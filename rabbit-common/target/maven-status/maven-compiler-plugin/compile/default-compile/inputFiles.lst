@@ -1,8 +1,0 @@
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\convert\RabbitMessageConverter.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\mybatis\handler\MessageJsonTypeHandler.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\convert\GenericMessageConverter.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\serializer\Serializer.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\serializer\SerializerFactory.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\serializer\impl\JacksonSerializer.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\utils\FastJsonConvertUtil.java
-E:\java-web-project\rabbitmq-component\rabbit-common\src\main\java\com\zengshen\rabbit\common\serializer\impl\JacksonSerializerFactory.java

@@ -25,23 +25,39 @@ public class ApplicationTest {
     @Test
     public void testProducerClient() throws Exception {
 
-        for(int i = 0 ; i < 1; i ++) {
             String uniqueId = UUID.randomUUID().toString();
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("name", "张三");
             attributes.put("age", "18");
             Message message = new Message(
                     uniqueId,
-                    "exchange-learnfddfsdfs",
+                    "exchange-learn",
                     "springboot.abc",
                     attributes,
                     0);
             message.setMessageType(MessageType.RELIANT);
-//			message.setDelayMills(15000);
             producerClient.send(message);
-        }
 
-        Thread.sleep(1000000);
+        Thread.sleep(1000);
+    }
+
+    @Test
+    public void delayTest() throws Exception {
+
+        String uniqueId = UUID.randomUUID().toString();
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("name", "曾深");
+        attributes.put("age", "18");
+        Message message = new Message(
+                uniqueId,
+                "delay-message",
+                "delay.zengshen",
+                attributes,
+                15000);
+        message.setMessageType(MessageType.RELIANT);
+        producerClient.send(message);
+
+        Thread.sleep(10000);
     }
 
 }

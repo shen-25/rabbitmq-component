@@ -13,7 +13,7 @@ import java.lang.reflect.Type;
  */
 public class RabbitMessageConverter implements MessageConverter {
     private GenericMessageConverter delegate;
-    private final String defaultExpire = String.valueOf(24 * 60 * 60 * 1000);
+//    private final String defaultExpire = String.valueOf(24 * 60 * 60 * 1000);
 
     public RabbitMessageConverter(GenericMessageConverter genericMessageConverter) {
         if (genericMessageConverter == null) {
@@ -24,8 +24,11 @@ public class RabbitMessageConverter implements MessageConverter {
 
     @Override
     public Message toMessage(Object object, MessageProperties messageProperties) throws MessageConversionException {
-        messageProperties.setExpiration(defaultExpire);
-//        messageProperties.setContentEncoding("utf-8");
+        messageProperties.setContentEncoding("utf-8");
+        messageProperties.setContentType("application/json");
+        com.zengshen.rabbit.api.Message message = (com.zengshen.rabbit.api.Message) object;
+        messageProperties.setDelay(message.getDelayMills());
+
         return this.delegate.toMessage(object, messageProperties);
     }
 

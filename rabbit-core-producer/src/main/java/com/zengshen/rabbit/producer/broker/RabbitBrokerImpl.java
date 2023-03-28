@@ -14,7 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 /**
  * @author word
@@ -63,7 +65,26 @@ public class RabbitBrokerImpl implements RabbitBroker {
     
     @Override
     public void sendMessages() {
+        List<Message> messages = MessageHolder.clear();
+        messages.forEach(new Consumer<Message>() {
+            @Override
+            public void accept(Message message) {
+                MessageHolderAyncQueue.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        CorrelationData correlationData = new CorrelationData(String.format("%s#%s#%s",
+                                message.getMessageId(), System.currentTimeMillis(), message.getMessageType()));
+                        String routingKey = message.getRoutingKey();
+                        String topic = message.getTopic();
+                        RabbitTemplate rabbitTemplate = rabbitTemplateContainer.getTemplate(message);
+                        rabbitTemplate.convertAndSend(topic, routingKey,
+                                message, correlationData);
 
+                        log.info("# RabbitBrokerImpl.sendMessages#  发送消息，消息的id: {}", message.getMessageId());
+                    }
+                });
+            }
+        });
     }
 
     /**
@@ -82,7 +103,7 @@ public class RabbitBrokerImpl implements RabbitBroker {
                 rabbitTemplate.convertAndSend(topic, routingKey,
                         message, correlationData);
 
-                log.info("# RabbitBrokerImpl.sendKernel#  发送消息，消息的id: {}", message.getMessageId());
+                log.info("正在发送消息，消息的id: {}", message.getMessageId());
             }
         });
 
