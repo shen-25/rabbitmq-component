@@ -1,5 +1,8 @@
 package com.zengshen.rabbit.task.parser;
 
+import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
+import com.dangdang.ddframe.job.api.script.ScriptJob;
+import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import com.dangdang.ddframe.job.config.JobCoreConfiguration;
 import com.dangdang.ddframe.job.config.JobTypeConfiguration;
 import com.dangdang.ddframe.job.config.dataflow.DataflowJobConfiguration;
@@ -56,17 +59,8 @@ public class ElasticJobConfParser implements ApplicationListener<ApplicationRead
                 }
                 // 获取接口类型， 用于判断是什么类型的任务
                 Class<?>[] classes = clazz.getInterfaces();
-                ElasticJobTypeEnum[] elasticJobTypeEnums = ElasticJobTypeEnum.values();
                 List<Class<?>> jobTypeNameList = Arrays.stream(classes).filter(aClass -> {
-                    String simpleName = aClass.getSimpleName();
-                    boolean isTypeName = false;
-                    for (ElasticJobTypeEnum elasticJobTypeEnum : elasticJobTypeEnums) {
-                        if (simpleName.equals(elasticJobTypeEnum.getType())) {
-                            isTypeName = true;
-                            break;
-                        }
-                    }
-                    return isTypeName;
+                    return  aClass == SimpleJob.class || aClass == DataflowJob.class || aClass == ScriptJob.class;
                 }).collect(Collectors.toList());
                 if (jobTypeNameList.isEmpty()) {
                     log.info("没有指定定时任务的类型");
